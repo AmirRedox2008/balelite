@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balelite"
+version = "1.0.0"
+description = "A lightweight, from-scratch Bale Bot API framework — sync + async bots, FSM, middleware, payments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Your Name", email = "you@example.com" }]
+keywords = ["bale", "bot", "api", "framework", "async", "fsm", "chatbot", "webhook", "payment"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Typing :: Typed",
+]
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+async = ["aiohttp>=3.9"]
+redis = ["redis>=4.2"]
+dev = ["pytest>=7.0", "aiohttp>=3.9"]
+
+[project.urls]
+Homepage = "https://github.com/your-username/balelite"
+Documentation = "https://github.com/your-username/balelite#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+balelite = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
