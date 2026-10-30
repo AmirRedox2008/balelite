@@ -64,7 +64,7 @@ pip install "balelite[async]"   # + async support (aiohttp)
 pip install "balelite[redis]"   # + Redis FSM storage
 
 # from source
-git clone https://github.com/your-username/balelite
+git clone https://github.com/AmirRedox2008//balelite
 cd balelite && pip install -e .
 ```
 
